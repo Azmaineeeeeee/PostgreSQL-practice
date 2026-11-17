@@ -84,3 +84,16 @@ SELECT * from employees
 UPDATE employees
  set email = 'azmainemushfiq@gmail.com'
  WHERE student_id = 5;
+
+ select country, count(*) from employees
+   GROUP BY country;
+
+   select country, avg(age) from employees
+    GROUP BY country;
+      HAVING avg(age) > 25; -- Having is used in a group and where is used for single value columns
+
+    -- Count Students Born is each year
+    select extract(year from dob) as birth_year, count(*)
+      FROM employees
+       GROUP BY birth_year;
+
