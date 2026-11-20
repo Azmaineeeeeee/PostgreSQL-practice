@@ -18,3 +18,5 @@ SELECT age(CURRENT_DATE, '2000-05-04');
 SELECT CURRENT_DATE - interval '1 year';
 
 SELECT extract (month from '2026-01-25' :: date);
+
+
